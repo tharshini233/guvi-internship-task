@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - User Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+
+<div class="profile-container">
+    <h2 class="profile-title">Account Profile</h2>
+    
+    <div class="avatar-wrapper">
+        <img id="userAvatar" class="avatar-image" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80" alt="Avatar">
+        <label for="image-upload" class="upload-btn" id="upload-label" style="display: none;">
+            <i class="fa-solid fa-camera" style="color: #fff; font-size: 14px;"></i>
+            <input type="file" id="image-upload" accept="image/*">
+        </label>
+    </div>
+
+    <div style="margin-bottom: 25px; text-align: center;">
+        <h3 id="sidebarName" style="font-size: 22px; font-weight: 600; margin-bottom: 5px; color: #ffffff;">Loading...</h3>
+        <p id="sidebarEmail" style="color: #94a3b8; font-size: 14px;">...</p>
+    </div>
+    <form id="profileForm" enctype="multipart/form-data">
+        <div class="input-group">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="profName" class="input-field" placeholder="Full Name" disabled>
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input type="date" id="profDOB" class="input-field" disabled>
+        </div>
+
+        <div class="button-group" style="margin-top: 25px;">
+            <button type="button" id="edit-btn" class="btn-action"><i class="fa-solid fa-user-pen" style="margin-right: 8px;"></i> Edit Profile</button>
+            <button type="submit" id="save-btn" class="btn-action" style="display: none; background: #10b981; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);"><i class="fa-solid fa-floppy-disk" style="margin-right: 8px;"></i> Save Changes</button>
+            <button type="button" id="cancel-btn" class="btn-action btn-secondary" style="display: none;"><i class="fa-solid fa-xmark" style="margin-right: 8px;"></i> Cancel</button>
+            <button type="button" id="logoutBtn" class="btn-action btn-secondary" style="margin-top: 15px; border-color: rgba(239, 68, 68, 0.4); color: #ef4444;"><i class="fa-solid fa-right-from-bracket" style="margin-right: 8px;"></i> Sign Out</button>
+        </div>
+    </form>
+
+    <div id="statusMessage" style="margin-top: 20px; font-size: 14px; font-weight: 500;"></div>
+</div>
+<script src="welcome.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Secure Auth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="background-overlay"></div>
+
+<div class="auth-wrapper">
+    <h2>Account Login</h2>
+    
+    <form id="loginForm" novalidate>
+        <div class="input-group-creative">
+            <i class="fa-solid fa-envelope input-icon"></i>
+            <input type="email" id="loginEmail" placeholder="Email Address">
+            <span class="field-error" id="emailError"></span>
+        </div>
+
+        <div class="input-group-creative">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="loginPassword" placeholder="Password">
+            <i class="fa-solid fa-eye toggle-password" id="eyeToggle"></i>
+            <span class="field-error" id="passwordError"></span>
+        </div>
+
+        <button type="submit" class="btn-auth">Sign In</button>
+    </form>
+
+    <p class="switch-text">Don't have an account? <a href="register.html">Register here</a></p>
+</div>
+<script src="login.js"></script>
+</body>
+</html>

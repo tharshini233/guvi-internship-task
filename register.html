@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Secure System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="background-overlay"></div>
+
+<div class="auth-wrapper">
+    <h2>Create Account</h2>
+    
+    <form id="registerForm" novalidate>
+        <div class="input-group-creative">
+            <i class="fa-solid fa-user input-icon"></i>
+            <input type="text" id="regName" placeholder="Full Name">
+            <span class="field-error" id="nameError"></span>
+        </div>
+
+        <div class="input-group-creative">
+            <i class="fa-solid fa-envelope input-icon"></i>
+            <input type="email" id="regEmail" placeholder="Email Address">
+            <span class="field-error" id="emailError"></span>
+        </div>
+
+        <div class="input-group-creative">
+            <i class="fa-solid fa-calendar-days input-icon"></i>
+            <input type="date" id="regDob">
+            <span class="field-error" id="dobError"></span>
+        </div>
+
+        <div class="input-group-creative">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input type="password" id="regPassword" placeholder="Password">
+            <span class="field-error" id="passwordError"></span>
+        </div>
+
+        <button type="submit" class="btn-auth">Register</button>
+    </form>
+
+    <p class="auth-footer">Already have an account? <a href="index.html">Sign In</a></p>
+</div>
+<script src="register.js"></script>
+</body>
+</html>
